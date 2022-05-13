@@ -2,6 +2,7 @@
 .terminal {
     background-color: $darkblue;
     padding: 2em;
+    position: relative;
 
     #logo {
         &.regular {
@@ -25,6 +26,24 @@
             border: 4px solid $purple;
             &:hover {
                 border-color: $purple-highlight;
+            }
+        }
+    }
+
+    .top-border {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        display: flex;
+        >div {
+            height: 4px;
+            width: 50%;
+            &:first-child {
+                background-color: $red;
+            }
+            &:nth-child(2) {
+                background-color: $purple;
             }
         }
     }

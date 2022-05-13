@@ -11,8 +11,12 @@ function style() {
 
 function watch() {
     browserSync.init({
-        server: {
-            baseDir: './'
+        // server: {
+        //     baseDir: './'
+        // },
+        host: "www.dc-atm.local",
+        proxy: {
+            target: "http://www.dc-atm.local"
         }
     });
     gulp.watch('./sass/**/*.scss', style);

@@ -2,6 +2,7 @@
 
 <body>
     <div class="terminal">
+        <?php require 'includes/terminal/top-border.html' ?>
         <!-- Terminal Head -->
         <?php require 'includes/terminal/terminal-head.html' ?>
 

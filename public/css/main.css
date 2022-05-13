@@ -88,6 +88,7 @@ body {
 .terminal {
   background-color: #282731;
   padding: 2em;
+  position: relative;
 }
 .terminal #logo.regular {
   max-width: 325px;
@@ -109,6 +110,23 @@ body {
 }
 .terminal .keypad .keyinput:hover {
   border-color: #65618E;
+}
+.terminal .top-border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+}
+.terminal .top-border > div {
+  height: 4px;
+  width: 50%;
+}
+.terminal .top-border > div:first-child {
+  background-color: #D24A5A;
+}
+.terminal .top-border > div:nth-child(2) {
+  background-color: #4B4868;
 }
 
 .mobile {
