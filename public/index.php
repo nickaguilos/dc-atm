@@ -6,7 +6,19 @@
 
         <!-- Terminal Body -->
         <main id="terminal-body" class="body transaction-selection">
-            <!-- Content Here -->
+            <div class="content">
+                <div class="keypad">
+                    <a href="" class="keyinput">1</a>
+                    <a href="" class="keyinput">2</a>
+                    <a href="" class="keyinput">3</a>
+                    <a href="" class="keyinput">4</a>
+                    <a href="" class="keyinput">5</a>
+                    <a href="" class="keyinput">6</a>
+                    <a href="" class="keyinput">7</a>
+                    <a href="" class="keyinput">8</a>
+                    <a href="" class="keyinput">9</a>
+                </div>
+            </div>
         </main>
     </div>
 

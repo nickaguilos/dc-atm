@@ -7,3 +7,24 @@ $base-font: 'SF Pro', Helvetica, sans-serif;
 .highlight {
     color: $red;
 }
+
+.success-message, .full-screen-text {
+    text-align: center;
+    min-height: 500px;
+    padding: 1em 0;
+
+    h1 {
+        font-size: 80px;
+        margin: 0;
+    }
+
+        @media screen and (max-width: 800px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+}

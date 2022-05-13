@@ -3,8 +3,24 @@ html {
     color: $light-gray;
     font-family: $base-font;
     font-size: 24px;
+
+    @media screen and (max-width: 800px) {
+        background-color: $darkblue;
+    }
 }
 
 * {
     box-sizing: border-box;
+}
+
+a {
+    color: $red;
+}
+
+body {
+    margin: 0;
+}
+
+.mobile {
+    font-size: 16px;
 }

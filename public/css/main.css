@@ -6,15 +6,52 @@
   color: #D24A5A;
 }
 
+.success-message, .full-screen-text {
+  text-align: center;
+  min-height: 500px;
+  padding: 1em 0;
+}
+.success-message h1, .full-screen-text h1 {
+  font-size: 80px;
+  margin: 0;
+}
+@media screen and (max-width: 800px) {
+  .success-message, .full-screen-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .success-message h1, .full-screen-text h1 {
+    font-size: 24px;
+  }
+}
+
 html {
   background-color: black;
   color: #D9D9D9;
   font-family: "SF Pro", Helvetica, sans-serif;
   font-size: 24px;
 }
+@media screen and (max-width: 800px) {
+  html {
+    background-color: #282731;
+  }
+}
 
 * {
   box-sizing: border-box;
+}
+
+a {
+  color: #D24A5A;
+}
+
+body {
+  margin: 0;
+}
+
+.mobile {
+  font-size: 16px;
 }
 
 .terminal {
@@ -43,13 +80,93 @@ html {
 .terminal #terminal-body.withdrawal-amount-input form {
   margin: 1em 0;
 }
+.mobile {
+  max-width: 700px;
+  margin: auto;
+}
+
 .terminal {
   background-color: #282731;
   padding: 2em;
 }
-
-#logo.regular {
+.terminal #logo.regular {
   max-width: 325px;
+}
+.terminal .keypad {
+  width: 500px;
+  margin: 2em auto;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
+}
+.terminal .keypad .keyinput {
+  font-size: 40px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 100px;
+  padding: 1.2em 1em;
+  border: 4px solid #4B4868;
+}
+.terminal .keypad .keyinput:hover {
+  border-color: #65618E;
+}
+
+.mobile {
+  background-color: #282731;
+  padding: 40px;
+}
+.mobile #logo.regular {
+  max-width: 150px;
+}
+.mobile .card {
+  background-color: #4B4868;
+  padding: 3em;
+  width: 400px;
+  margin-right: 40px;
+}
+.mobile .card.account .title {
+  font-weight: 500;
+  font-size: 2em;
+}
+.mobile .card.account .account-num {
+  opacity: 0.8;
+}
+.mobile .card.account .amount {
+  font-size: 2.5em;
+  margin: 1em 0;
+  display: block;
+}
+.mobile .scroller {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin: 2em -40px;
+  padding-left: 40px;
+}
+.mobile .scroller::-webkit-scrollbar {
+  display: none;
+}
+.mobile .scroller .scrollitem {
+  display: inline-block !important;
+  vertical-align: top;
+  white-space: normal;
+}
+.mobile .body.homescreen .loan-update {
+  margin-top: 3em;
+  border-top: 4px solid #4B4868;
+  padding-top: 3em;
+}
+.mobile .body.homescreen .loan-update > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile .body.homescreen .loan-update > span {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.mobile .body.homescreen .loan-update .amount {
+  font-size: 32px;
 }
 
 #withdrawal-amount {
@@ -61,15 +178,28 @@ html {
   font-weight: bold;
   color: #D9D9D9;
 }
-
-.success-message {
-  text-align: center;
-  min-height: 500px;
-  padding: 1em 0;
+@media screen and (max-width: 800px) {
+  #withdrawal-amount {
+    padding: 1em;
+    font-size: 32px;
+  }
 }
-.success-message h1 {
-  font-size: 80px;
-  margin: 0;
+
+.card.qr {
+  width: auto;
+  margin: 1em 0;
+  text-align: center;
+}
+.card.qr img {
+  width: 100%;
+  display: block;
+  margin-bottom: 2em;
+}
+
+.map {
+  margin-left: -40px;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .button {
@@ -78,6 +208,11 @@ html {
   padding: 1em 2em;
   text-decoration: none;
   text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .button {
+    padding: 0.5em 2em;
+  }
 }
 .button.main {
   background-color: #4B4868;
@@ -104,6 +239,14 @@ html {
   width: 100%;
   margin: 0.5em 1em;
 }
+@media screen and (max-width: 800px) {
+  .button-stack .button {
+    display: block;
+    width: 100%;
+    padding: 1em 2em;
+    margin-bottom: 1em;
+  }
+}
 
 .button-grid {
   display: grid;
@@ -123,6 +266,23 @@ html {
   font-weight: normal;
   font-size: 0.5em;
 }
+.button-grid.single .button {
+  display: block;
+  width: 100%;
+}
+
+.fixed-action-wrapper {
+  padding: 1em;
+}
+
+.fixed-action {
+  position: fixed;
+  bottom: 1em;
+  width: 82%;
+  display: block;
+  padding: 1em 2em;
+  border-top: 4px solid #282731;
+}
 
 .header#terminal-head {
   display: flex;
@@ -136,4 +296,10 @@ html {
   border: none;
   text-align: right;
   display: block;
+}
+.header#mobile-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }

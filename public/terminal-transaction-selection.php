@@ -35,7 +35,7 @@
                 <!-- Cardless -->
                 <div>
                     <img src="/images/term-left-pointer.svg" alt="">
-                    <a href="" class="button secondary">Cardless Transaction</a>
+                    <a href="cardless-welcome-screen.php" class="button secondary">Cardless Transaction</a>
                     <img src="/images/term-right-pointer.svg" alt="">
                 </div>
             </div>
