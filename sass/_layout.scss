@@ -1,0 +1,48 @@
+.terminal {
+    width: 1280px;
+    height: 1024px;
+    margin: 2em auto;
+
+    #terminal-body {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "it it it it"
+        "m m m m"
+        "c c c c"
+        "bg bg bg bg";
+
+        .instruction-text {
+            grid-area: it;
+        }
+
+        .content, .button-stack {
+            grid-area: c;
+        }
+
+        .success-message {
+            grid-area: m;
+        }
+
+        .button-grid {
+            grid-area: bg;
+        }
+
+
+        &.withdrawal-amount-input {
+            form {
+                margin: 1em 0;
+            }
+        }
+
+        // template
+        &.with-constant-action {
+            // position: relative;
+            .button-grid {
+                // position: absolute;
+                // bottom: 1em;
+            }
+        }
+    }
+}

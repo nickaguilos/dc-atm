@@ -1,0 +1,33 @@
+// Big wigs
+.terminal {
+    background-color: $darkblue;
+    padding: 2em;
+}
+
+// Small wigs
+#logo {
+    &.regular {
+        max-width: 325px;
+    }
+}
+
+#withdrawal-amount { //Input for amount
+    padding: 1.5em 1em;
+    border: 4px solid $purple;
+    background: transparent;
+    width: 100%;
+    font-size: 48px;
+    font-weight: bold;
+    color: $light-gray;
+}
+
+.success-message {
+    text-align: center;
+    min-height: 500px;
+    padding: 1em 0;
+
+    h1 {
+        font-size: 80px;
+        margin: 0;
+    }
+}

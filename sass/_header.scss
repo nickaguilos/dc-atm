@@ -1,0 +1,15 @@
+.header {
+    &#terminal-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        input {
+            background-color: transparent;
+            color: $light-gray;
+            font-size: 24px;
+            border: none;
+            text-align: right;
+            display: block;
+        }
+    }
+}

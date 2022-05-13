@@ -1,0 +1,56 @@
+.button {
+    color: $light-gray;
+    font-weight: bold;
+    padding: 1em 2em;
+    text-decoration: none;
+    text-align: center;
+    
+    &.main {
+        background-color: $purple;
+        &:hover {
+            background-color: $purple-highlight;
+        }
+    }
+    &.secondary {
+        background-color: transparent;
+        border: 4px solid $purple;
+        &:hover {
+            border-color: $purple-highlight;
+        }
+    }
+    
+}
+
+.button-stack {
+    margin-top: 1em;
+    >div {
+        display: flex;
+
+        .button {
+            font-size: 40px;
+            width: 100%;
+            margin: 0.5em 1em;
+        }
+    }
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1em;
+
+    >div {
+        display: flex;
+
+        .button {
+            font-size: 40px;
+            width: 100%;
+            margin: 0.5em 1em;
+            line-height: 0.8em;
+            span {
+                font-weight: normal;
+                font-size: 0.5em;
+            }
+        }
+    }
+}
